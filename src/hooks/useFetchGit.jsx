@@ -2,24 +2,21 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 export const useFetchGit = () => {
   const [data, setData] = useState([]);
-  const [error, setError] = useState(False);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    const user = "ivanmacedonio";
-    const repo = "apiBlog2";
-
     async function fetchData() {
       try {
         const res = await axios.get(
-          `https://api.github.com/repos/${user}/${repo}/commits`
+          `https://api.github.com/repos/ivanmacedonio/Take-Home-test/commits`
         );
         setData(res.data);
-        console.log("pass");
       } catch {
         setError(True);
       }
     }
-  });
+    fetchData();
+  }, []);
 
-  return data, error;
+  return { data, error };
 };
