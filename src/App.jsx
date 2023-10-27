@@ -5,16 +5,24 @@ function App() {
   const { data, error } = useFetchGit();
   console.log(data);
   return (
-    <div className="app">
-      {data.map((commit) => (
-        <div className="cardContainer">
-          <Card author={commit.author.login}
-          message={commit.commit.message}
-          title= {commit.sha}
-          img={commit.committer.avatar_url}></Card>
-        </div>
-      ))}
-    </div>
+    <>
+      <h1 id="titleApp">Commits History by Ivandev.</h1>
+      <div className="app">
+        {data
+          .slice()
+          .reverse()
+          .map((commit) => (
+            <div className="cardContainer" key={commit.sha}>
+              <Card
+                author={commit.author.login}
+                message={commit.commit.message}
+                title={commit.sha}
+                img={commit.committer.avatar_url}
+              ></Card>
+            </div>
+          ))}
+      </div>
+    </>
   );
 }
 

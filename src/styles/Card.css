@@ -15,6 +15,12 @@
   margin: 1.875rem 0.9375rem 1.25rem 1.5625rem;
   border-radius: 0.875rem;
 }
+.avatar img{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 1rem;
+  margin-top: .2rem;
+}
 
 .info {
   display: inline-block;
