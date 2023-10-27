@@ -12,7 +12,7 @@ Currently, two official plugins are available:
 
 Go to the main directory
 
-- cd vite-project 
+- cd Take-Home-test
 
 Install node package manager
 
