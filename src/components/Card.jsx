@@ -1,15 +1,18 @@
 import React from "react";
+import "../assets/me.jpg";
 import "../styles/Card.css";
-export const Card = () => {
+export const Card = ({ img, title, author, message }) => {
   return (
     <>
-      <div class="card">
-        <label class="avatar"></label>
-        <label class="info">
-          <span class="info-1"></span>
-          <span class="info-2"></span>
+      <div className="card">
+        <label className="avatar" style={{ backgroundImage: { img } }}></label>
+        <label className="info">
+          <span className="info-1">{title}</span>
+          <span className="info-2">{author}</span>
         </label>
-        <div class="content-1"></div>
+        <div className="content-1">
+          <p>{message}</p>
+        </div>
       </div>
     </>
   );

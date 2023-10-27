@@ -8,7 +8,10 @@ function App() {
     <div className="app">
       {data.map((commit) => (
         <div className="cardContainer">
-          <Card></Card>
+          <Card author={commit.author.login}
+          message={commit.commit.message}
+          title= {commit.sha}
+          img={commit.committer.avatar_url}></Card>
         </div>
       ))}
     </div>
