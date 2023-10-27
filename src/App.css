@@ -18,3 +18,10 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@media (max-width: 576px){
+    #titleApp{
+        text-align: center;
+    }
+  }
