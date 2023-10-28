@@ -9,7 +9,7 @@ export const useFetchGit = () => {
     async function fetchData() {
       try {
         const res = await axios.get(
-          `https://api.github.com/repos/ivanmacedonio/Take-Home-test/commits`
+          `http://127.0.0.1:8000/apiV1/getCommit/`
         );
         setData(res.data);
         setIsLoading(false)

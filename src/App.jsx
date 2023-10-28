@@ -4,7 +4,7 @@ import { Loading } from "./components/Loading";
 import { useFetchGit } from "./hooks/useFetchGit";
 function App() {
   const { data, error, loading } = useFetchGit();
-  console.log(loading);
+  console.log(data);
   return (
     <>
       <h1 id="titleApp">Commits History by Ivandev.</h1>
